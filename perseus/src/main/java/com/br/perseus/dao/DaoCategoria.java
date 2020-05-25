@@ -6,15 +6,14 @@
 package com.br.perseus.dao;
 
 import com.br.perseus.contrato.ICategoria;
-import com.br.perseus.contrato.IContratoGenerico;
 import com.br.perseus.entidades.Categoria;
 import com.br.perseus.entidades.Usuario;
 
 /**
  *
- * @author gabriel-pc
+ * @author gabrielrodrigues
  */
-public class DaoCategoria extends DaoGenerico<Categoria> implements ICategoria, IContratoGenerico<Categoria> {
+public class DaoCategoria extends DaoGenerico<Categoria> implements ICategoria{
 
     @Override
     public Categoria vincularUsuario(Categoria categoria, Usuario usuario) throws Exception {

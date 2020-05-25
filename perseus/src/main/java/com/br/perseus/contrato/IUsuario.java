@@ -15,11 +15,15 @@ import java.util.List;
  * @author gabriel-pc
  */
 public interface IUsuario {
-    
+
     public Usuario desativar(Usuario usuario) throws Exception;
-    
+
     public List<Evento> eventosUsuario(Usuario usuario) throws Exception;
-    
+
     public List<Categoria> buscarCategoriasUsuario(Usuario usuario) throws Exception;
-    
+
+    public Usuario salvar(Usuario entidade) throws Exception;
+
+    public Usuario alterar(Usuario entidade, Integer id) throws Exception;
+
 }

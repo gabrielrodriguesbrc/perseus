@@ -5,6 +5,7 @@
  */
 package com.br.perseus.contrato;
 
+import com.br.perseus.entidades.Categoria;
 import com.br.perseus.entidades.Evento;
 import com.br.perseus.entidades.Usuario;
 import java.util.List;
@@ -15,8 +16,14 @@ import java.util.List;
  */
 public interface IEventos {
 
-    public List<Evento> buscaEventosProximos(Usuario usuario) throws Exception;
-    
     public Evento buscaEvento(Evento evento) throws Exception;
-    
+
+    public List<Evento> buscaEventosProximos(Usuario usuario) throws Exception;
+
+    public List<Evento> buscaEventosCategoria(List<Categoria> categorias) throws Exception;
+
+    public Evento alteraEvento(Evento evento) throws Exception;
+
+    public void desativarEvento(Evento evento) throws Exception;
+
 }

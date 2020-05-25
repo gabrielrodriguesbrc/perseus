@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author gabriel-pc
+ * @author gabrielrodrigues
  */
 @Entity
 @Table(name = "evento")
@@ -25,30 +25,23 @@ public class Evento implements Serializable {
     @Id
     @Column(name = "ID_EVENTO")
     private Integer idEvento;
-
     @Column(name = "NOME")
     private String nome;
-
     @Column(name = "DESCRICAO")
     private String descricao;
-
     @Column(name = "DATA")
     private Date data;
-
     @MapsId("idEndereco")
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_ENDERECO", nullable = false,
             foreignKey = @ForeignKey(name = "FK_EVENTO_ENDERECO"))
     private Endereco endereco;
-
     @MapsId
     @OneToOne(optional = false)
     @JoinColumn(name = "ID_USUARIO", nullable = false)
     private Usuario professor;
-
     @OneToMany(mappedBy = "idUsuario")
     private List<Usuario> usuarios;
-
     @OneToMany(mappedBy = "idCategoria")
     private List<Categoria> categorias;
 

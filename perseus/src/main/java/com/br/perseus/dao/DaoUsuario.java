@@ -5,7 +5,6 @@
  */
 package com.br.perseus.dao;
 
-import com.br.perseus.contrato.IContratoGenerico;
 import com.br.perseus.contrato.IUsuario;
 import com.br.perseus.entidades.Categoria;
 import com.br.perseus.entidades.Evento;
@@ -18,7 +17,8 @@ import javax.persistence.EntityManager;
  *
  * @author gabrielrodrigues
  */
-public class DaoUsuario extends DaoGenerico<Usuario> implements IUsuario, IContratoGenerico<Usuario> {
+
+public class DaoUsuario extends DaoGenerico<Usuario> implements IUsuario {
 
     public DaoUsuario() {
     }

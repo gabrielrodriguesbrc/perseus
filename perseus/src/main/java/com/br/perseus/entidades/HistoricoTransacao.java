@@ -19,7 +19,9 @@ public class HistoricoTransacao implements Serializable {
     @Enumerated(EnumType.STRING)
     private EnumEvento historico;
     @Column(name = "VALOR")
-    private String valor;
+    private Double valor;
+    @Column(name = "DESCRICAO")
+    private String descricao;
     @Column(name = "DATA")
     private Date data;
     @ManyToOne
@@ -50,12 +52,20 @@ public class HistoricoTransacao implements Serializable {
         this.historico = historico;
     }
 
-    public String getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public Date getData() {
@@ -80,6 +90,6 @@ public class HistoricoTransacao implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idHistoricoTransacao );
+        return Objects.hash(idHistoricoTransacao);
     }
 }

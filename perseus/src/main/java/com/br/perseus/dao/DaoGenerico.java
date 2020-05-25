@@ -10,11 +10,12 @@ import org.hibernate.HibernateException;
 
 /**
  *
- * @author gabriel-pc
+ * @author gabrielrodrigues
  * @param <T>
  */
 public class DaoGenerico<T> extends EntityFactory {
 
+    
     public T salvar(T entidade) {
         begin();
         try {

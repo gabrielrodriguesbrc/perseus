@@ -5,6 +5,7 @@
  */
 package com.br.perseus.fabrica;
 
+import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
@@ -18,7 +19,10 @@ public class EntityFactoryPersistence {
 
     public EntityFactoryPersistence() {
         try {
-            entityManagerFactory = Persistence.createEntityManagerFactory("perseus-PU");
+            EntityManagerFactory em = Persistence.createEntityManagerFactory("perseus-PU");
+            EntityManager entityManager = em.createEntityManager();
+            entityManager.close(); 
+            em.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

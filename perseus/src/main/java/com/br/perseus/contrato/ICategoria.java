@@ -6,7 +6,9 @@
 package com.br.perseus.contrato;
 
 import com.br.perseus.entidades.Categoria;
+import com.br.perseus.entidades.Evento;
 import com.br.perseus.entidades.Usuario;
+import java.util.List;
 
 /**
  *
@@ -15,5 +17,5 @@ import com.br.perseus.entidades.Usuario;
 public interface ICategoria {
 
     public Categoria vincularUsuario(Categoria categoria, Usuario usuario) throws Exception;
-
+    
 }

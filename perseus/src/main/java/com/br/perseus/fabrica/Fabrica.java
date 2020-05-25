@@ -5,14 +5,16 @@
  */
 package com.br.perseus.fabrica;
 
+import com.br.perseus.contrato.ICarteira;
 import com.br.perseus.contrato.ICategoria;
 import com.br.perseus.contrato.IUsuario;
+import com.br.perseus.dao.DaoCarteira;
 import com.br.perseus.dao.DaoCategoria;
 import com.br.perseus.dao.DaoUsuario;
 
 /**
  *
- * @author gabriel-pc
+ * @author gabrielrodrigues
  */
 public class Fabrica {
 
@@ -23,4 +25,7 @@ public class Fabrica {
     public static ICategoria obterCategoria() {
         return new DaoCategoria();
     }
+    public static ICarteira obterCarteira(){
+    return new DaoCarteira();
+    } 
 }
